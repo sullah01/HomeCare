@@ -13,6 +13,11 @@ body {
     background: var(--grey);
     color: var(--black);
 }
+.hero-overlay {
+    background: rgba(14, 90, 58, 0.7); /* Your green overlay */
+    padding: 80px 20px;
+    color: white;
+}
 
 header {
     background: var(--green);
