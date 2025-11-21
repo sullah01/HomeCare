@@ -1,51 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HomeExperts | Contact</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF‑8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact – HomeExperts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <nav>
+    <div class="logo">HomeExperts</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
-<nav>
-  <div class="logo">HomeExperts</div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
+  <header style="background: linear-gradient(135deg, #1f3c88, #4f67a1);">
+    <h1>Contact Us</h1>
+    <p>Have a question, request, or need support? Reach out and we'll get back to you promptly.</p>
+  </header>
 
-<header style="background:linear-gradient(135deg,#6a11cb,#2575fc);">
-  <h1>Contact Us</h1>
-  <p>Get in touch for consultation, services, or project inquiries.</p>
-</header>
-
-<section>
-  <h2>Send Us a Message</h2>
-  <div class="container" style="max-width:600px;">
-    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-      <div style="margin-bottom:15px;">
-        <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:15px; border-radius:10px; border:1px solid #ccc;">
+  <section>
+    <h2>Get In Touch</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Email</h3>
+        <p>support@homeexperts.com</p>
       </div>
-      <div style="margin-bottom:15px;">
-        <input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:15px; border-radius:10px; border:1px solid #ccc;">
+      <div class="card">
+        <h3>Phone</h3>
+        <p>+1 (555) 123‑4567</p>
       </div>
-      <div style="margin-bottom:15px;">
-        <textarea name="message" placeholder="Your Message" required style="width:100%; padding:15px; border-radius:10px; border:1px solid #ccc;" rows="6"></textarea>
+      <div class="card">
+        <h3>Office Address</h3>
+        <p>123 Expert Lane, Tech City, Country</p>
       </div>
-      <button type="submit" style="padding:15px 30px; border:none; background:#2575fc; color:#fff; border-radius:30px; font-weight:600; cursor:pointer;">Send Message</button>
-    </form>
-  </div>
-</section>
+    </div>
 
-<footer>
-  &copy; 2025 HomeExperts. All Rights Reserved.
-</footer>
+    <div style="max-width:600px; margin: 50px auto;">
+      <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:8px;">
+        <input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:8px;">
+        <textarea name="message" placeholder="Your Message" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px;" rows="6"></textarea>
+        <button type="submit" style="margin-top:15px; padding:10px 20px; background:#1f3c88; color:#fff; border:none; border-radius:8px; cursor:pointer;">Send Message</button>
+      </form>
+    </div>
+  </section>
 
+  <footer>
+    &copy; 2025 HomeExperts. All rights reserved.
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
