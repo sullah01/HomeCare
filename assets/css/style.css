@@ -1,0 +1,88 @@
+/* Color Palette */
+:root {
+    --green: #0E5A3A;
+    --grey: #D9D9D9;
+    --black: #000000;
+    --white: #ffffff;
+}
+
+/* Global */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--grey);
+    color: var(--black);
+}
+
+header {
+    background: var(--green);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-items: center;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a.active, nav a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: var(--green);
+    color: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cta-btn {
+    background: var(--white);
+    color: var(--green);
+    padding: 12px 25px;
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Service Boxes */
+.services-overview {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.service-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    background: var(--white);
+    width: 200px;
+    margin: 10px;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
