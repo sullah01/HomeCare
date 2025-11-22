@@ -5,28 +5,44 @@ const services = [
     id: 'service-plumbing',
     title: 'Plumbing Repairs & Installation',
     desc: 'Fast repairs, leaks, bathroom installs and drain clearing by certified plumbers.',
-    imgQuery: 'plumbing,tools',
+    svg: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="200" fill="#1E8449"/>
+            <circle cx="100" cy="100" r="60" fill="#3498DB"/>
+            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="18" fill="#fff">Plumbing</text>
+          </svg>`,
     url: 'service-plumbing.html'
   },
   {
     id: 'service-heating',
     title: 'Heating & Boiler Services',
     desc: 'Boiler repairs, servicing and system optimisation to keep you warm and efficient.',
-    imgQuery: 'heating,boiler',
+    svg: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="200" fill="#E67E22"/>
+            <polygon points="100,20 160,180 40,180" fill="#F1C40F"/>
+            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="16" fill="#fff">Heating</text>
+          </svg>`,
     url: 'service-heating.html'
   },
   {
     id: 'service-gas',
     title: 'Gas Safety & Installations',
     desc: 'Certified gas engineers for safe installations, inspections and repairs.',
-    imgQuery: 'gas,installation',
+    svg: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="200" fill="#3498DB"/>
+            <circle cx="100" cy="100" r="70" fill="#1ABC9C"/>
+            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="16" fill="#fff">Gas</text>
+          </svg>`,
     url: 'service-gas.html'
   },
   {
     id: 'service-maintenance',
     title: 'Preventative Maintenance',
     desc: 'Routine maintenance plans to preserve and extend the lifetime of home systems.',
-    imgQuery: 'maintenance,home',
+    svg: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="200" fill="#9B59B6"/>
+            <polygon points="100,20 180,180 20,180" fill="#8E44AD"/>
+            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="#fff">Maintenance</text>
+          </svg>`,
     url: 'service-maintenance.html'
   }
 ];
@@ -40,7 +56,7 @@ services.forEach((s, idx) => {
   slide.className = 'slide';
   slide.style.opacity = idx === 0 ? '1' : '0';
   slide.innerHTML = `
-    <img class="bg" src="https://source.unsplash.com/1600x900/?${s.imgQuery}" alt="${s.title}">
+    <div class="svg-bg">${s.svg}</div>
     <div class="slide-copy">
       <h2>${s.title}</h2>
       <p>${s.desc}</p>
@@ -72,7 +88,7 @@ services.forEach((s, idx) => {
   const block = document.createElement('section');
   block.className = 'service-block';
   block.innerHTML = `
-    <img src="https://source.unsplash.com/900x600/?${s.imgQuery}" alt="${s.title}">
+    <div class="svg-preview">${s.svg}</div>
     <div class="copy">
       <h3>${s.title}</h3>
       <p class="lead dropcap">${s.desc} Learn more about how we deliver reliable solutions for every home.</p>
@@ -118,7 +134,4 @@ navToggle.addEventListener('click', ()=>{
 // year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-}); // END DOMContentLoaded
-
-// Plain form demo: no backend in this demo
-// (If you push to GitHub Pages and want to capture leads, connect the form to a service like Formspree or Netlify Forms)
+});
