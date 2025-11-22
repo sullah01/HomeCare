@@ -1,47 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact Us – YourHomeCover</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — HomeCare</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <div class="logo">YourHomeCover</div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">HomeCare</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn btn-outline">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open navigation">☰</button>
     </div>
-  </nav>
-
-  <header style="background: linear-gradient(135deg, var(--color-accent), var(--color-primary));">
-    <h1>Contact Us</h1>
-    <p>If you need help, want a quote, or have an emergency, get in touch.</p>
   </header>
 
-  <section>
-    <h2>Get in Touch</h2>
-    <div class="card-container">
-      <div class="card"><h3>Phone</h3><p>0330 0247 999</p></div>
-      <div class="card"><h3>Email</h3><p>support@yourhomecover.com</p></div>
-      <div class="card"><h3>Address</h3><p>123 HomeServe St, City, Country</p></div>
-    </div>
+  <main class="container main-content">
+    <h1>Contact Us</h1>
+    <p class="dropcap">For bookings and enquiries, call us or send a message via the form below. We aim to respond within one business day.</p>
 
-    <div style="max-width:600px; margin: 50px auto;">
-      <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:8px;">
-        <input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:8px;">
-        <textarea name="message" placeholder="Your Message" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px;" rows="6"></textarea>
-        <button type="submit" style="padding:10px 20px; background:var(--color-primary); color:#fff; border:none; border-radius:8px; cursor:pointer;">Send Message</button>
-      </form>
-    </div>
-  </section>
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+      </div>
+      <div class="form-row">
+        <input type="text" name="phone" placeholder="Phone number">
+      </div>
+      <div class="form-row">
+        <select name="service">
+          <option value="plumbing">Plumbing</option>
+          <option value="heating">Heating</option>
+          <option value="gas">Gas</option>
+          <option value="maintenance">Maintenance</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <textarea name="message" rows="6" placeholder="Brief description"></textarea>
+      </div>
+      <div class="form-row">
+        <button class="btn" type="submit">Send Request</button>
+      </div>
+      <p id="form-msg" class="muted"></p>
+    </form>
+  </main>
 
-  <footer>&copy; 2025 YourHomeCover. All Rights Reserved.</footer>
-  <script src="js/script.js"></script>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>HomeCare Services</h4>
+        <p>Reliable plumbing, heating &amp; gas services for your home.</p>
+      </div>
+      <nav>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="copyright">&copy; <span id="year7"></span> HomeCare Services</div>
+  </footer>
+  <script>
+    document.getElementById('year7').textContent = new Date().getFullYear();
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      document.getElementById('form-msg').textContent = 'Thanks — your request has been captured (this demo does not submit to a server).';
+    });
+  </script>
 </body>
 </html>
