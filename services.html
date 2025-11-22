@@ -1,67 +1,75 @@
 <!doctype html>
-<a href="services.html">Services</a>
-<a href="about.html">About</a>
-<a href="contact.html" class="btn btn-outline">Contact</a>
-</nav>
-<button class="nav-toggle" aria-label="Open navigation">☰</button>
-</div>
-</header>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Services — HomeCare</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">HomeCare</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn btn-outline">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open navigation">☰</button>
+    </div>
+  </header>
 
+  <main class="container main-content">
+    <h1 class="page-title">Our Services</h1>
+    <div class="services-grid">
+      <!-- list of services -->
+      <article class="service-card">
+        <img src="https://source.unsplash.com/600x400/?plumbing,tools" alt="Plumbing">
+        <h3>Plumbing Repairs & Installation</h3>
+        <p>Professional plumbing repairs, drain clearing and new installations.</p>
+        <a class="btn" href="service-plumbing.html">View Details</a>
+      </article>
 
-<main class="container main-content">
-<h1 class="page-title">Our Services</h1>
-<div class="services-grid">
-<!-- list of services -->
-<article class="service-card">
-<img src="https://source.unsplash.com/600x400/?plumbing,tools" alt="Plumbing">
-<h3>Plumbing Repairs & Installation</h3>
-<p>Professional plumbing repairs, drain clearing and new installations.</p>
-<a class="btn" href="service-plumbing.html">View Details</a>
-</article>
+      <article class="service-card">
+        <img src="https://source.unsplash.com/600x400/?heating,boiler" alt="Heating">
+        <h3>Heating & Boiler Services</h3>
+        <p>Heating system servicing, boiler repair and annual safety checks.</p>
+        <a class="btn" href="service-heating.html">View Details</a>
+      </article>
 
+      <article class="service-card">
+        <img src="https://source.unsplash.com/600x400/?gas,installation" alt="Gas">
+        <h3>Gas Safety & Installations</h3>
+        <p>Certified gas engineers for safe installations and emergency repairs.</p>
+        <a class="btn" href="service-gas.html">View Details</a>
+      </article>
 
-<article class="service-card">
-<img src="https://source.unsplash.com/600x400/?heating,boiler" alt="Heating">
-<h3>Heating & Boiler Services</h3>
-<p>Heating system servicing, boiler repair and annual safety checks.</p>
-<a class="btn" href="service-heating.html">View Details</a>
-</article>
+      <article class="service-card">
+        <img src="https://source.unsplash.com/600x400/?maintenance,home" alt="Maintenance">
+        <h3>Preventative Maintenance</h3>
+        <p>Routine maintenance plans to keep systems running efficiently.</p>
+        <a class="btn" href="service-maintenance.html">View Details</a>
+      </article>
 
+    </div>
+  </main>
 
-<article class="service-card">
-<img src="https://source.unsplash.com/600x400/?gas,installation" alt="Gas">
-<h3>Gas Safety & Installations</h3>
-<p>Certified gas engineers for safe installations and emergency repairs.</p>
-<a class="btn" href="service-gas.html">View Details</a>
-</article>
-
-
-<article class="service-card">
-<img src="https://source.unsplash.com/600x400/?maintenance,home" alt="Maintenance">
-<h3>Preventative Maintenance</h3>
-<p>Routine maintenance plans to keep systems running efficiently.</p>
-<a class="btn" href="service-maintenance.html">View Details</a>
-</article>
-
-
-</div>
-</main>
-
-
-<footer class="site-footer">
-<div class="container footer-inner">
-<div>
-<h4>HomeCare Services</h4>
-<p>Reliable plumbing, heating &amp; gas services for your home.</p>
-</div>
-<nav>
-<a href="services.html">Services</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</nav>
-</div>
-<div class="copyright">&copy; <span id="year2"></span> HomeCare Services</div>
-</footer>
-<script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>HomeCare Services</h4>
+        <p>Reliable plumbing, heating &amp; gas services for your home.</p>
+      </div>
+      <nav>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="copyright">&copy; <span id="year2"></span> HomeCare Services</div>
+  </footer>
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
 </body>
 </html>
