@@ -1,4 +1,4 @@
-// script.js - minimal interactive behaviours, slider, dynamic news & DOM injection
+document.addEventListener("DOMContentLoaded", function () {
 
 const services = [
   {
@@ -66,7 +66,7 @@ function showSlide(n){
 // autoplay
 setInterval(()=> showSlide(currentSlide+1), 6000);
 
-// Inject services preview alternating sections
+// Inject services preview
 const servicesPreview = document.getElementById('services-preview');
 services.forEach((s, idx) => {
   const block = document.createElement('section');
@@ -82,7 +82,7 @@ services.forEach((s, idx) => {
   servicesPreview.appendChild(block);
 });
 
-// Dynamic blog/news: simple client-side shuffle from a static list so content is different each load
+// News dynamic section
 const sampleNews = [
   {title:'How to reduce winter heating bills',src:'Blog',url:'#'},
   {title:'Top 5 signs your boiler needs service',src:'Blog',url:'#'},
@@ -102,19 +102,24 @@ chosen.forEach(n => {
   item.innerHTML = `
     <h4>${n.title}</h4>
     <p class="muted">${n.src} • ${new Date().toLocaleDateString()}</p>
-    <p>Brief excerpt to hook the reader: a quick tip or summary will appear here. <a href="${n.url}">Read</a></p>
+    <p>Brief excerpt: quick tip or summary appears here. <a href="${n.url}">Read</a></p>
   `;
   newsList.appendChild(item);
 });
 
-// small nav toggle for mobile
+// mobile nav toggle
 const navToggle = document.querySelector('.nav-toggle');
 navToggle.addEventListener('click', ()=>{
   const nav = document.querySelector('.main-nav');
-  if(nav.style.display === 'flex') nav.style.display = '';
-  else nav.style.display = 'flex';
+  nav.style.display = nav.style.display === 'flex' ? '' : 'flex';
   nav.style.flexDirection = 'row';
 });
+
+// year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+}); // END DOMContentLoaded
+
 
 // set year
 document.getElementById('year').textContent = new Date().getFullYear();
