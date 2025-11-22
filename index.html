@@ -1,52 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YourHomeCover – Home Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<!doctype html>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="contact.html" class="btn btn-outline">Contact</a>
+</nav>
+<button class="nav-toggle" aria-label="Open navigation">☰</button>
+</div>
+</header>
 
-  <nav>
-    <div class="logo">YourHomeCover</div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
 
-  <header>
-    <h1>Fast, Trusted Home Emergency Services</h1>
-    <p>Plumbing, heating, electrics and more — we’ve got your home covered.</p>
-    <a href="services.html" class="button">Our Services</a>
-  </header>
+<!-- Slider -->
+<section class="hero">
+<div class="slider" id="slider">
+<!-- slides injected by script.js -->
+<button class="slide-prev" aria-label="previous">◀</button>
+<button class="slide-next" aria-label="next">▶</button>
+</div>
+</section>
 
-  <section>
-    <h2>What We Provide</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>Plumbing Repairs</h3>
-        <p>Handling leaks, blocked drains, pipe issues, and more.</p>
-      </div>
-      <div class="card">
-        <h3>Heating & Boiler Service</h3>
-        <p>Emergency boiler repairs, annual servicing, and maintenance.</p>
-      </div>
-      <div class="card">
-        <h3>Electrical Services</h3>
-        <p>Repairs, safety checks, and home electrics emergencies.</p>
-      </div>
-    </div>
-  </section>
 
-  <footer>
-    &copy; 2025 YourHomeCover. All Rights Reserved.
-  </footer>
+<!-- Services preview alternating sections -->
+<main class="container main-content">
 
-  <script src="js/script.js"></script>
+
+<section class="services-preview" id="services-preview">
+<!-- Service blocks injected by script.js -->
+</section>
+
+
+<!-- Dynamic blog/news area -->
+<section class="news">
+<h2 class="section-title">Latest From Our Blog & News</h2>
+<div id="news-list" class="news-list">
+<!-- dynamic items injected by script.js -->
+</div>
+</section>
+
+
+</main>
+
+
+<footer class="site-footer">
+<div class="container footer-inner">
+<div>
+<h4>HomeCare Services</h4>
+<p>Reliable plumbing, heating &amp; gas services for your home.</p>
+</div>
+<nav>
+<a href="services.html">Services</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+<div class="copyright">&copy; <span id="year"></span> HomeCare Services</div>
+</footer>
+
+
+<script src="script.js"></script>
 </body>
 </html>
