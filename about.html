@@ -1,56 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Us – YourHomeCover</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About — HomeCare</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <nav>
-    <div class="logo">YourHomeCover</div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">HomeCare</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn btn-outline">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open navigation">☰</button>
     </div>
-  </nav>
-
-  <header style="background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));">
-    <h1>About YourHomeCover</h1>
-    <p>We are a dedicated home emergency service team, offering fast and reliable support when you need it most.</p>
   </header>
 
-  <section>
-    <h2>Our Mission</h2>
-    <p>To provide peace of mind by offering professional and prompt repair services for plumbing, heating, and electrical emergencies.</p>
-  </section>
+  <main class="container main-content">
+    <h1>About HomeCare</h1>
+    <p class="dropcap">HomeCare is a trusted local company providing plumbing, heating and gas services. Our certified engineers ensure safety, transparency and a tidy finish on every job.</p>
+    <h2>Why choose us</h2>
+    <ul>
+      <li>Experienced, certified technicians</li>
+      <li>Transparent pricing</li>
+      <li>Rapid emergency response</li>
+    </ul>
+  </main>
 
-  <section>
-    <h2>Our Team</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>Peter Williams</h3>
-        <p>Founder & CEO — Over 15 years in home repair services.</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>HomeCare Services</h4>
+        <p>Reliable plumbing, heating &amp; gas services for your home.</p>
       </div>
-      <div class="card">
-        <h3>Alice Barnes</h3>
-        <p>Lead Technician — Specialist in heating systems and gas works.</p>
-      </div>
-      <div class="card">
-        <h3>David Lee</h3>
-        <p>Electrical Engineer — Skilled electrician and safety compliance expert.</p>
-      </div>
+      <nav>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-  </section>
-
-  <footer>
-    &copy; 2025 YourHomeCover. All Rights Reserved.
+    <div class="copyright">&copy; <span id="year6"></span> HomeCare Services</div>
   </footer>
-
-  <script src="js/script.js"></script>
+  <script>document.getElementById('year6').textContent = new Date().getFullYear();</script>
 </body>
 </html>
