@@ -120,9 +120,5 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 }); // END DOMContentLoaded
 
-
-// set year
-document.getElementById('year').textContent = new Date().getFullYear();
-
 // Plain form demo: no backend in this demo
 // (If you push to GitHub Pages and want to capture leads, connect the form to a service like Formspree or Netlify Forms)
