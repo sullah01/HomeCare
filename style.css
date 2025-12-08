@@ -975,9 +975,27 @@ max-width: 50%; /* ADD THIS */
         font-size: 2.5rem;
     }
 }
-
-@media (min-width: 769px) {
-    .slide {
+@media (min-width: 769px) and (max-width: 1024px){
+body {
+        padding-top: 80px !important;
+    }
+.container {
+        padding: 0 30px;
+    }
+    
+    .main-nav {
+        gap: 15px;
+    }
+    
+    .main-nav a {
+        font-size: 0.95rem;
+        padding: 8px 10px;
+    }
+.expert-text h2 {
+        font-size: 1.6rem;
+    }
+   
+ .slide {
         flex-direction: row;
         padding: 0 60px;
         text-align: left;
@@ -1015,6 +1033,7 @@ max-width: 50%; /* ADD THIS */
         justify-content: flex-end;
     }
 }
+
 
 @media (min-width: 1024px) {
     .slide h2 {
