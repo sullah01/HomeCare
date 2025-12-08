@@ -697,22 +697,39 @@ body {
 @media (max-width: 768px) {
     body {
         padding-top: 70px !important;
+        overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+    .nav-logo {
+        height: 30px;
+        margin-left: 10px;
     }
 
     .container {
         padding: 0 15px;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    /* Fix the header container for mobile */
+    .header-container {
+	padding: 0 15px; /* ADD THIS */
+        flex-wrap: nowrap; /* ADD THIS */
+        gap: 10px;
     }
 
     .brand {
         font-size: 1.3rem;
+max-width: 60%; /* ADD THIS */
+        word-wrap: break-word; /* ADD THIS */
+        flex-shrink: 1; /* ADD THIS */
+
     }
 
     .nav-toggle {
         display: flex;
     }
 
-   /* In the @media (max-width: 768px) section - Replace the .main-nav styles */
-.main-nav {
+   .main-nav {
     display: none;
     position: fixed;
     top: 70px; /* Start below the header */
@@ -749,22 +766,34 @@ body {
 .main-nav a:last-child {
     border-bottom: none;
 }
+     /* Fix expert banner text overflow */
+    .expert-text h2 {
+        font-size: 1.4rem;
+        padding: 0 10px;
+        line-height: 1.4;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+     /* Fix dynamic contact display */
+    .dynamic-contact-display {
+        margin: 10px;
+        padding: 12px;
+        max-width: 100%;
+        overflow: hidden;
+    }
     .expert-banner {
         padding: 15px 0;
     }
 
-    .expert-text h2 {
-        font-size: 1.4rem;
-        padding: 0 10px;
-    }
-
-    .dynamic-contact-display {
-        margin: 10px;
-        padding: 12px;
-    }
-
     .dynamic-phone {
         font-size: 1.5em;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+/* 5. Prevent text overflow globally */
+    h1, h2, h3, h4, h5, h6, p, span:not(.btn *) {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .slide {
@@ -860,11 +889,50 @@ body {
         width: 100%;
         max-width: 250px;
     }
+      .service-areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .service-area-item {
+        padding: 0.75rem;
+    }
+    
+    .service-area-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.25rem;
+    }
+    
+    .service-area-header h5 {
+        font-size: 1rem;
+    }
+    
+    .service-area-phone {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .service-area-note {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .service-area-note i {
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 480px) {
     body {
         padding-top: 65px !important;
+max-width: 50%; /* ADD THIS */
+
+    }
+.main-nav {
+        top: 65px; /* UPDATE THIS if it exists */
+        height: calc(100vh - 65px); /* UPDATE THIS */
     }
 
     .brand {
@@ -995,14 +1063,6 @@ body {
 @media screen and (max-width: 900px) {
     .nav-logo {
         height: 35px;
-    }
-}
-
-/* Responsive adjustments for mobile */
-@media screen and (max-width: 768px) {
-    .nav-logo {
-        height: 30px;
-        margin-left: 10px;
     }
 }
 
@@ -1157,42 +1217,6 @@ body {
     opacity: 0.9;
 }
 
-/* Responsive Design for Service Areas */
-@media (max-width: 768px) {
-    .service-areas-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.75rem;
-    }
-    
-    .service-area-item {
-        padding: 0.75rem;
-    }
-    
-    .service-area-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.25rem;
-    }
-    
-    .service-area-header h5 {
-        font-size: 1rem;
-    }
-    
-    .service-area-phone {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-    }
-    
-    .service-area-note {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.5rem;
-    }
-    
-    .service-area-note i {
-        margin-top: 0;
-    }
-}
 
 @media (max-width: 480px) {
     .service-areas-grid {
