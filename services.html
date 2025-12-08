@@ -179,6 +179,18 @@
         document.querySelectorAll('.service-card').forEach(card => {
             observer.observe(card);
         });
+        // Fix mobile menu visibility on pages with complex backgrounds
+document.addEventListener('DOMContentLoaded', function() {
+    const style = document.createElement('style');
+    style.textContent = `
+        @media (max-width: 768px) {
+            .main-nav {
+                background: #2E8B57 !important;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+});
     </script>
 
     <style>
