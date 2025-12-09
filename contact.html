@@ -19,7 +19,38 @@
             --contact-light: #F0FFF0;
             --contact-dark: #1A472A;
         }
-
+/* CONTACT PAGE NAVIGATION FIX - DESKTOP ONLY */
+@media (min-width: 769px) {
+    .site-header .main-nav {
+        display: flex !important;
+        position: static !important;
+        width: auto !important;
+        height: auto !important;
+        background: transparent !important;
+        flex-direction: row !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+    
+    .site-header .main-nav a {
+        background: transparent !important;
+        padding: 8px 12px !important;
+        margin: 0 !important;
+        border-bottom: none !important;
+        border-left: none !important;
+        border-radius: 4px !important;
+        color: var(--text-light) !important;
+        font-size: 1rem !important;
+    }
+    
+    .site-header .main-nav .btn-outline {
+        background: transparent !important;
+        border: 2px solid var(--text-light) !important;
+        color: var(--text-light) !important;
+        padding: 10px 22px !important;
+    }
+}
         .contact-main {
             padding-top: 0;
             background: linear-gradient(135deg, #f8fff8 0%, #e8f5e8 100%);
