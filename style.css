@@ -1017,8 +1017,12 @@ body {
     }
     
     .main-nav {
-        top: 65px;
-        height: calc(100vh - 65px);
+        width: 85% !important;
+    }
+    
+    .main-nav a {
+        padding: 10px 16px;
+        font-size: 1rem;
     }
 
     .brand {
@@ -1183,11 +1187,11 @@ body {
     }
 }
 
-/* Responsive adjustments for tablet */
-@media screen and (max-width: 900px) {
-    .nav-logo {
-        height: 35px;
-        max-width: 140px;
+/* Tablet sizes */
+@media (max-width: 900px) {
+    .main-nav {
+        width: 70% !important;
+        max-width: 280px !important;
     }
 }
 
