@@ -135,5 +135,50 @@
 
   <script src="./script.js"></script>
   <script src="./js/location-number.js"></script>
+  <script>
+    // Mobile navigation toggle - Add to all pages
+    document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.querySelector('.nav-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        if (navToggle && mainNav) {
+            navToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                mainNav.classList.toggle('active');
+                this.innerHTML = mainNav.classList.contains('active') ? '✕' : '☰';
+                this.setAttribute('aria-label', mainNav.classList.contains('active') ? 'Close navigation' : 'Open navigation');
+            });
+            
+            // Close menu when clicking links
+            document.querySelectorAll('.main-nav a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mainNav.classList.remove('active');
+                    navToggle.innerHTML = '☰';
+                    navToggle.setAttribute('aria-label', 'Open navigation');
+                });
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mainNav.contains(event.target) && !navToggle.contains(event.target)) {
+                    mainNav.classList.remove('active');
+                    navToggle.innerHTML = '☰';
+                    navToggle.setAttribute('aria-label', 'Open navigation');
+                }
+            });
+        }
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mainNav && mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+                if (navToggle) {
+                    navToggle.innerHTML = '☰';
+                    navToggle.setAttribute('aria-label', 'Open navigation');
+                }
+            }
+        });
+    });
+  </script>
 </body>
 </html>
