@@ -142,46 +142,6 @@
         <div class="copyright">&copy; <span id="year2"></span> HomeFix Experts</div>
     </footer>
 
-    <script>
-        document.getElementById('year2').textContent = new Date().getFullYear();
-        
-        // Mobile navigation toggle
-        document.querySelector('.nav-toggle').addEventListener('click', function() {
-            const nav = document.querySelector('.main-nav');
-            nav.classList.toggle('active');
-        });
-
-        // Close menu when clicking on links
-        document.querySelectorAll('.main-nav a').forEach(link => {
-            link.addEventListener('click', function() {
-                document.querySelector('.main-nav').classList.remove('active');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const nav = document.querySelector('.main-nav');
-            const toggle = document.querySelector('.nav-toggle');
-            if (nav.classList.contains('active') && !nav.contains(event.target) && !toggle.contains(event.target)) {
-                nav.classList.remove('active');
-            }
-        });
-
-        // Add animation to service cards
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.service-card').forEach(card => {
-            observer.observe(card);
-        });
-        
-    </script>
-
     <style>
         /* Services Page Specific Styles */
         .services-main {
