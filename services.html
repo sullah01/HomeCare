@@ -183,10 +183,10 @@
         }
 
         .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 0;
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+            gap: 25px !important;
+            margin: 0 !important;
         }
 
         .service-card {
@@ -428,8 +428,9 @@
             }
 
             .services-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+                gap: 25px !important;
+                padding: 0 !important;
             }
 
             .emergency-cta {
