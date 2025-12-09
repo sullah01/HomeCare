@@ -774,7 +774,7 @@ body {
      
         /* Ensure toggle button is visible */
     .nav-toggle {
-    display: none; /* Hidden on desktop */
+    display: flex !important; /* Hidden on desktop */
     background: transparent;
     border: none;
     color: var(--text-light);
