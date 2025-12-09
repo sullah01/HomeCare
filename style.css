@@ -150,7 +150,7 @@ body {
 }
 
 .nav-toggle {
-    display: none;
+    display: none; /* Hidden on desktop */
     background: transparent;
     border: none;
     color: var(--text-light);
@@ -162,6 +162,7 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 1001;
+    transition: all 0.3s ease;
 }
 
 /* 24/7 Heating & Boiler Experts Banner */
@@ -773,13 +774,24 @@ body {
      
         /* Ensure toggle button is visible */
     .nav-toggle {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 6px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
+    display: none; /* Hidden on desktop */
+    background: transparent;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px;
+    min-height: 44px;
+    min-width: 44px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
     
-    .nav-toggle:hover {
+       .nav-toggle:hover {
         background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
     }
     /* Mobile Navigation Menu - FIXED VERSION */
     .main-nav {
