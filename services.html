@@ -574,6 +574,47 @@
         }
     }
 </style>
-   
+<script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.querySelector('.nav-toggle');
+        const mainNav = document.querySelector('.main-nav');
+        
+        if (navToggle && mainNav) {
+            navToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                mainNav.classList.toggle('active');
+                this.setAttribute('aria-label', 
+                    mainNav.classList.contains('active') ? 'Close navigation' : 'Open navigation'
+                );
+                this.innerHTML = mainNav.classList.contains('active') ? '✕' : '☰';
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!mainNav.contains(e.target) && !navToggle.contains(e.target)) {
+                    mainNav.classList.remove('active');
+                    navToggle.setAttribute('aria-label', 'Open navigation');
+                    navToggle.innerHTML = '☰';
+                }
+            });
+            
+            // Close menu when clicking a link
+            mainNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mainNav.classList.remove('active');
+                    navToggle.setAttribute('aria-label', 'Open navigation');
+                    navToggle.innerHTML = '☰';
+                });
+            });
+        }
+        
+        // Update year in footer
+        document.querySelectorAll('[id^="year"]').forEach(element => {
+            element.textContent = new Date().getFullYear();
+        });
+    });
+</script>   
 </body>
 </html>
