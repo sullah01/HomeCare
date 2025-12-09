@@ -770,55 +770,7 @@ body {
         flex-shrink: 1;
     }
 
-     .main-nav {
-        background: rgba(46, 139, 87, 0.98) !important;
-        backdrop-filter: blur(10px);
-        border-right: 3px solid var(--secondary);
-        box-shadow: 5px 0 20px rgba(0,0,0,0.3);
-     }
-
-    .main-nav a {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-        margin: 8px 0;
-        padding: 12px 20px;
-        transition: all 0.3s ease;
-        border-bottom: none;
-        color: white !important;
-        font-weight: 600;
-        font-size: 1.1rem;
-        width: 100%;
-        text-align: left;
-        display: flex;
-        align-items: center;
-    }
-
-    .main-nav a:last-child {
-        border-bottom: none;
-    }
      
-    .main-nav a:hover {
-        background: rgba(255, 255, 255, 0.2);
-        transform: translateX(5px);
-        color: white !important;
-    }
-           .main-nav .btn-outline {
-        background: rgba(255, 255, 255, 0.15);
-        border-color: rgba(255, 255, 255, 0.3);
-        color: white !important;
-        margin-top: 10px;
-        justify-content: center;
-    }
-    
-    .main-nav .btn-outline:hover {
-        background: rgba(255, 255, 255, 0.25);
-        border-color: rgba(255, 255, 255, 0.5);
-    }
-    
-    .main-nav .active {
-        background: rgba(255, 255, 255, 0.25) !important;
-        border-left: 4px solid #FFD700;
-    }
         /* Ensure toggle button is visible */
     .nav-toggle {
         background: rgba(255, 255, 255, 0.1);
@@ -828,6 +780,78 @@ body {
     
     .nav-toggle:hover {
         background: rgba(255, 255, 255, 0.2);
+    }
+    /* Mobile Navigation Menu - FIXED VERSION */
+    .main-nav {
+        display: none !important; /* Hidden by default */
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 80%;
+        max-width: 300px;
+        height: calc(100vh - 70px);
+        background: rgba(46, 139, 87, 0.98) !important;
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0;
+        z-index: 1000;
+        padding: 1.5rem;
+        box-shadow: 5px 0 20px rgba(0,0,0,0.3);
+        overflow-y: auto;
+        border-right: 3px solid var(--secondary);
+    }
+
+    .main-nav.active {
+        display: flex !important; /* Only show when active class is added */
+    }
+
+    .main-nav a {
+        font-size: 1.1rem;
+        padding: 12px 20px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        white-space: normal;
+        word-wrap: break-word;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        margin: 8px 0;
+        transition: all 0.3s ease;
+        color: white !important;
+        font-weight: 600;
+    }
+
+    .main-nav a:last-child {
+        border-bottom: none;
+    }
+
+    .main-nav a:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateX(5px);
+        color: white !important;
+    }
+
+    .main-nav .btn-outline {
+        background: rgba(255, 255, 255, 0.15) !important;
+        border: 2px solid rgba(255, 255, 255, 0.3) !important;
+        color: white !important;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .main-nav .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.25) !important;
+        border-color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .main-nav .active {
+        background: rgba(255, 255, 255, 0.25) !important;
+        border-left: 4px solid #FFD700 !important;
     }
     
     /* Fix expert banner text overflow */
