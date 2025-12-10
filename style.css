@@ -76,7 +76,7 @@ body {
     flex: 1;
     left: 50%;
     transform: translateX(-50%);
-    min-width: 0; /* Crucial for text truncation */
+    min-width: 0;
     text-overflow: ellipsis;
     text-align: center;
     white-space: nowrap;
@@ -158,7 +158,7 @@ body {
 }
 
 .nav-toggle {
-    display: none; /* Hidden on desktop */
+    display: none;
     background: transparent;
     border: none;
     color: var(--text-light);
@@ -743,7 +743,7 @@ body {
     border: 2px solid white;
 }
 
-/* Mobile-First Responsive Design */
+/* ================== MOBILE VIEW (0-768px) ================== */
 @media (max-width: 768px) {
     body {
         padding-top: 70px !important;
@@ -751,12 +751,13 @@ body {
         width: 100%;
     }
     
-     .nav-logo {
-        max-height: 150px !important; /* Changed from 80px to 70px or keep 80px if you want */
-        height: auto;
-        width: auto;
-        max-width: 180px !important; /* Increased from 120px */
-        object-fit: contain;
+    /* LARGER LOGO ON MOBILE */
+    .nav-logo {
+        max-height: 80px !important;
+        height: 80px !important;
+        width: auto !important;
+        max-width: 160px !important;
+        object-fit: contain !important;
     }
 
     .container {
@@ -769,58 +770,65 @@ body {
     .header-container {
         padding: 0 15px;
         flex-wrap: nowrap;
-        gap: 10px;
+        gap: 5px;
         min-height: 70px;
         position: relative;
         justify-content: space-between;
+        align-items: center;
     }
 
+    /* Logo on LEFT */
     .logo-container {
-        order: 0;
+        order: 0 !important;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
     }
+
+    /* Brand text in CENTER */
     .brand {
-        position: static;
-        transform: none;
-        left: 50%;
-        font-size: 1.5rem; /* Slightly larger on mobile */
-        text-align: center;
+        position: static !important;
+        transform: none !important;
+        left: auto !important;
+        font-size: 1.3rem !important;
+        text-align: center !important;
         flex: 1;
-        flex-shrink: 1;
         min-width: 0;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        max-width: 50%;
-        order: 2;
+        max-width: 50% !important;
+        margin: 0 auto;
+        order: 1 !important;
     }
 
-     
-        /* Ensure toggle button is visible */
+    /* Menu button on RIGHT */
     .nav-toggle {
-    display: flex !important; /* Hidden on desktop */
-    background: transparent;
-    border: none;
-    color: var(--text-light);
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 8px;
-    min-height: 44px;
-    min-width: 44px;
-    left: auto;
-    align-items: center;
-    justify-content: center;
-    z-index: 1001;
-    transition: all 0.3s ease;
-        order: 1;
-}
+        display: flex !important;
+        order: 2 !important;
+        background: transparent;
+        border: none;
+        color: var(--text-light);
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 8px;
+        min-height: 44px;
+        min-width: 44px;
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+    }
     
-       .nav-toggle:hover {
+    .nav-toggle:hover {
         background: rgba(255, 255, 255, 0.2);
         transform: scale(1.05);
     }
-    /* Mobile Navigation Menu - FIXED VERSION */
+
+    /* Mobile Navigation Menu */
     .main-nav {
-        display: none !important; /* Hidden by default */
+        display: none !important;
         position: fixed;
         top: 70px;
         left: 0;
@@ -838,10 +846,11 @@ body {
         box-shadow: 5px 0 20px rgba(0,0,0,0.3);
         overflow-y: auto;
         border-right: 3px solid var(--secondary);
+        order: 3 !important;
     }
 
     .main-nav.active {
-        display: flex !important; /* Only show when active class is added */
+        display: flex !important;
     }
 
     .main-nav a {
@@ -1068,6 +1077,7 @@ body {
     }
 }
 
+/* ================== VERY SMALL MOBILE (0-480px) ================== */
 @media (max-width: 480px) {
     body {
         padding-top: 65px !important;
@@ -1075,6 +1085,19 @@ body {
     
     .header-container {
         min-height: 65px;
+        gap: 3px;
+    }
+    
+    /* EVEN LARGER LOGO FOR VERY SMALL SCREENS */
+    .nav-logo {
+        max-height: 70px !important;
+        height: 70px !important;
+        max-width: 140px !important;
+    }
+    
+    .brand {
+        font-size: 1.1rem !important;
+        max-width: 45% !important;
     }
     
     .main-nav {
@@ -1084,15 +1107,6 @@ body {
     .main-nav a {
         padding: 10px 16px;
         font-size: 1rem;
-    }
-
-    .brand {
-        font-size: 1.1rem;
-        max-width: 45%;
-    }
-    .nav-logo {
-        max-height: 60px !important; /* Increased from 35px */
-        max-width: 120px !important; /* Increased from 100px */
     }
 
     .expert-text h2 {
@@ -1148,14 +1162,23 @@ body {
     }
 }
 
+/* ================== TABLET VIEW (769px-1024px) ================== */
 @media (min-width: 769px) and (max-width: 1024px) {
     body {
         padding-top: 80px !important;
-        font-size: 1.8rem; 
     }
     
     .container {
         padding: 0 30px;
+    }
+    
+    .brand {
+        font-size: 1.8rem;
+    }
+    
+    /* Logo size for tablet */
+    .nav-logo {
+        max-height: 75px !important;
     }
     
     .main-nav {
@@ -1166,9 +1189,6 @@ body {
         font-size: 0.9rem;
         padding: 8px 10px;
     }
-     .nav-logo {
-    max-height: 55px !important;
-  }
     
     .expert-text h2 {
         font-size: 1.6rem;
@@ -1213,7 +1233,16 @@ body {
     }
 }
 
-@media (min-width: 1024px) {
+/* ================== DESKTOP VIEW (1025px+) ================== */
+@media (min-width: 1025px) {
+    .brand {
+        font-size: 2rem;
+    }
+    
+    .nav-logo {
+        max-height: 90px !important;
+    }
+    
     .slide h2 {
         font-size: 3rem;
     }
@@ -1226,90 +1255,46 @@ body {
     .service-block {
         gap: 4rem;
     }
-}
-
-/* High-resolution displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .brand {
-        font-weight: 700;
-    }
-    
-    .btn {
-        font-weight: 600;
-    }
-}
-
-/* Reduced motion for accessibility */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
     
     .slide {
-        transition: none;
-    }
-    
-    .service-block:hover {
-        transform: none;
-    }
-}
-
-/* Tablet sizes */
-@media (max-width: 900px) {
-    .main-nav {
-        width: 70% !important;
-        max-width: 280px !important;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .header-container {
         flex-direction: row;
-        align-items: center;
-        gap: 10px;
+        text-align: left;
+        padding: 40px 60px;
     }
     
-    .nav-toggle {
-        order: 3;
+    .slide-copy {
+        text-align: left;
+        max-width: 600px;
     }
     
-    .brand {
-        order: 1;
-        flex: 1;
+    .service-block {
+        flex-direction: row;
+        padding: 4rem;
     }
-    
-    .logo-container {
-        order: 2;
-        flex-shrink: 0;
+
+    .service-block:nth-child(even) {
+        flex-direction: row-reverse;
     }
-    
-    .main-nav {
-        width: 80%;
-        max-width: 300px;
+
+    .real-image-preview {
+        width: 48%;
+        height: 350px;
     }
-    
-    .nav-logo {
-        height: 30px;
-        max-width: 130px;
+
+    .copy {
+        text-align: left;
+    }
+
+    .footer-inner {
+        flex-direction: row;
+        text-align: left;
     }
 }
 
-/* Very small screens */
-@media screen and (max-width: 480px) {
-     .brand {
-    font-size: 1.1rem;
-    max-width: 45%;
-  }
-  
-  .nav-logo {
-    max-height: 35px !important;
-    max-width: 100px;
-  }    
-}
+/* ================== REMOVE CONFLICTING MEDIA QUERIES ================== */
+/* Delete these conflicting sections if they exist in your file */
 
-/* Service Areas Styling (from previous section) */
+/* Service Areas Styling */
 .service-areas-card {
     background: var(--card-bg);
     padding: 1.5rem;
@@ -1459,7 +1444,6 @@ body {
 }
 
 /* ========== SERVICES PAGE FIXES ========== */
-/* This will override any conflicting styles for the services page */
 .services-main .services-grid {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
@@ -1487,4 +1471,32 @@ body {
 .services-main {
     padding-top: 80px !important;
     min-height: calc(100vh - 200px) !important;
-        }
+}
+
+/* High-resolution displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .brand {
+        font-weight: 700;
+    }
+    
+    .btn {
+        font-weight: 600;
+    }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .slide {
+        transition: none;
+    }
+    
+    .service-block:hover {
+        transform: none;
+    }
+}
