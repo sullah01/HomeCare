@@ -96,7 +96,7 @@ body {
 }
 
 .nav-logo {
-    max-height: 130px !important;
+    max-height: 230px !important;
     height: auto;
     width: auto;
     object-fit: contain;
