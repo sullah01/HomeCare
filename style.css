@@ -752,10 +752,10 @@ body {
     }
     
      .nav-logo {
-        max-height: 70px !important; /* Changed from 80px to 70px or keep 80px if you want */
+        max-height: 150px !important; /* Changed from 80px to 70px or keep 80px if you want */
         height: auto;
         width: auto;
-        max-width: 140px !important; /* Increased from 120px */
+        max-width: 180px !important; /* Increased from 120px */
         object-fit: contain;
     }
 
