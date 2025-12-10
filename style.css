@@ -751,11 +751,11 @@ body {
         width: 100%;
     }
     
-    .nav-logo {
-        max-height: 80px !important;
+     .nav-logo {
+        max-height: 70px !important; /* Changed from 80px to 70px or keep 80px if you want */
         height: auto;
         width: auto;
-        max-width: 120px;
+        max-width: 140px !important; /* Increased from 120px */
         object-fit: contain;
     }
 
@@ -1087,8 +1087,12 @@ body {
     }
 
     .brand {
-        font-size: 1rem;
+        font-size: 1.1rem;
         max-width: 45%;
+    }
+    .nav-logo {
+        max-height: 60px !important; /* Increased from 35px */
+        max-width: 120px !important; /* Increased from 100px */
     }
 
     .expert-text h2 {
