@@ -781,9 +781,9 @@ body {
     .brand {
         position: static;
         transform: none;
-        left: auto;
-        font-size: 1.3rem; /* Slightly larger on mobile */
-        text-align: left;
+        left: 50%;
+        font-size: 1.5rem; /* Slightly larger on mobile */
+        text-align: center;
         flex: 1;
         flex-shrink: 1;
         min-width: 0;
@@ -806,6 +806,7 @@ body {
     padding: 8px;
     min-height: 44px;
     min-width: 44px;
+    left: auto;
     align-items: center;
     justify-content: center;
     z-index: 1001;
