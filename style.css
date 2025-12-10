@@ -752,9 +752,11 @@ body {
     }
     
     .nav-logo {
-        height: 40px;
+        max-height: 80px !important;
+        height: auto;
+        width: auto;
         max-width: 120px;
-        max-height: 40px !important;
+        object-fit: contain;
     }
 
     .container {
@@ -789,7 +791,7 @@ body {
         text-overflow: ellipsis;
         white-space: nowrap;
         max-width: 50%;
-        order: 1;
+        order: 2;
     }
 
      
@@ -808,7 +810,7 @@ body {
     justify-content: center;
     z-index: 1001;
     transition: all 0.3s ease;
-        order: 2;
+        order: 1;
 }
     
        .nav-toggle:hover {
